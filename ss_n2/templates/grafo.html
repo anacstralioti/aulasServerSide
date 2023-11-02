@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Conversão de Grafo</title>
+</head>
+<body>
+   <h1>Conversão de Grafo</h1>
+   <p>Insira o grafo:</p>
+
+
+   <form action="/calcular_dijkstra" method="POST">
+       <textarea name="grafo_json" rows="5" cols="40"></textarea><br>
+       <input type="submit" value="Calcular Dijkstra">
+   </form>
+
+
+   <p>Resultado do caminho mais curto:</p>
+   <ul>
+       {% for destino, distancia in caminhos.items() %}
+           <li>Caminho mais curto de A para {{ destino }}: {{ distancia }}</li>
+       {% endfor %}
+   </ul>
+
+
+   <p>Grafo:</p>
+   <pre>{{ resultado_json|tojson|safe }}</pre>
+
+
+   <h2>Tempo:</h2>
+   <p>{{ tempo_decorrido }} ms</p>
+</body>
+</html>

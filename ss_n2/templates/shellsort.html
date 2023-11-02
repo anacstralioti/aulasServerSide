@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Vetor em Python</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           text-align: center;
+           background-color: #f5f5f5;
+       }
+       h1 {
+           color: #333;
+       }
+       form {
+           margin: 10px;
+       }
+       ul {
+           list-style-type: none;
+           padding: 0;
+       }
+       li {
+           background-color: #fff;
+           border: 1px solid #ccc;
+           margin: 2px;
+           padding: 4px;
+           border-radius: 1px;
+           box-shadow: 2px 2px 5px #888888;
+       }
+       h2 {
+           color: #333;
+       }
+       p {
+           color: #555;
+       }
+   </style>
+</head>
+<body>
+   <h1>Insira os valores do vetor:</h1>
+   <form method="POST">
+       <input type="text" name="valor" placeholder="Insira valores separados por vírgula">
+       <input type="submit" value="Adicionar">
+   </form>
+   <h2>Tempo:</h2>
+   <p>{{ tempo_decorrido }} ms</p>
+   <h2>Valores do vetor:</h2>
+   <ul>
+       {% for valor in valores %}
+           <li>{{ valor }}</li>
+       {% endfor %}
+   </ul>
+</body>
+</html>
